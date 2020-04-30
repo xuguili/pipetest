@@ -20,29 +20,29 @@ node() {
 <html>
 <head>
 <meta charset="UTF-8">
-<title>${ENV, var="JOB_NAME"}-绗?{BUILD_NUMBER}娆℃瀯寤烘棩蹇?/title>
+<title>${ENV, var="JOB_NAME"}-第${BUILD_NUMBER}次构建日志</title>
 </head>
 <body leftmargin="8" marginwidth="0" topmargin="8" marginheight="4" offset="0">
 <table width="95%" cellpadding="0" cellspacing="0" style="font-size: 11pt; font-family: Tahoma, Arial, Helvetica, sans-serif">
 <tr>
-   <td>(鏈偖浠舵槸绋嬪簭鑷姩涓嬪彂鐨勶紝璇峰嬁鍥炲锛?</td>
+   <td>(本邮件是程序自动下发的，请勿回复!)</td>
 </tr>
 <tr>
-   <td><h2><font color="#0000FF">鏋勫缓缁撴灉 - ${BUILD_STATUS}</font></h2></td>
+   <td><h2><font color="#0000FF">构建结果 - ${BUILD_STATUS}</font></h2></td>
 </tr>
 <tr>
-   <td><br /> <b><font color="#0B610B">鏋勫缓淇℃伅</font></b> <hr size="2" width="100%" align="center" /></td> 
+   <td><br /> <b><font color="#0B610B">构建信息</font></b> <hr size="2" width="100%" align="center" /></td> 
 </tr> 
 <tr>
 <td> 
      <ul> 
-          <li>椤圭洰鍚嶇О&nbsp;锛?nbsp;${PROJECT_NAME}</li>
-          <li>鏋勫缓缂栧彿&nbsp;锛?nbsp;绗?{BUILD_NUMBER}娆℃瀯寤?/li>
-          <li>瑙﹀彂鍘熷洜锛?nbsp;${CAUSE}</li>
-          <li>鏋勫缓鏃ュ織锛?nbsp;<a href="${BUILD_URL}console">${BUILD_URL}console</a></li>
-          <li>鏋勫缓&nbsp;&nbsp;Url&nbsp;锛?nbsp;<a href="${BUILD_URL}">${BUILD_URL}</a></li>
-          <li>宸ヤ綔鐩綍&nbsp;锛?nbsp;<a href="${PROJECT_URL}ws">${PROJECT_URL}ws</a></li>
-          <li>椤圭洰&nbsp;&nbsp;Url&nbsp;锛?nbsp;<a href="${PROJECT_URL}">${PROJECT_URL}</a></li>
+          <li>项目名称&nbsp;:&nbsp;${PROJECT_NAME}</li>
+          <li>构建编号&nbsp;：&nbsp;第${BUILD_NUMBER}次构建</li>
+          <li>触发原因:&nbsp;${CAUSE}</li>
+          <li>构建日志:nbsp;<a href="${BUILD_URL}console">${BUILD_URL}console</a></li>
+          <li>构建&nbsp;&nbsp;Url&nbsp;:&nbsp;<a href="${BUILD_URL}">${BUILD_URL}</a></li>
+          <li>工作目录&nbsp;:&nbsp;<a href="${PROJECT_URL}ws">${PROJECT_URL}ws</a></li>
+          <li>项目&nbsp;&nbsp;Url&nbsp;:&nbsp;<a href="${PROJECT_URL}">${PROJECT_URL}</a></li>
      </ul> 
 </td> 
 </tr>
@@ -55,7 +55,7 @@ node() {
 <tr> 
      <td>
          <ul> 
-              <li>鍘嗗彶鍙樻洿璁板綍 : <a href="${PROJECT_URL}changes">${PROJECT_URL}changes</a></li>
+              <li>历史变更记录: <a href="${PROJECT_URL}changes">${PROJECT_URL}changes</a></li>
          </ul></td> 
 </tr>
 <tr>
@@ -69,7 +69,7 @@ node() {
      </td>
 </tr>
 <tr>
-     <td><b><font color="#0B610B">鏋勫缓鏃ュ織 (鏈�鍚?100琛?:</font></b> <hr size="2" width="100%" align="center" /></td>
+     <td><b><font color="#0B610B">构建日志(最后100行):</font></b> <hr size="2" width="100%" align="center" /></td>
 </tr> <!-- <tr> <td>Test Logs (if test has ran): <a href="${PROJECT_URL}ws/TestResult/archive_logs/Log-Build-${BUILD_NUMBER}.zip">${PROJECT_URL}/ws/TestResult/archive_logs/Log-Build-${BUILD_NUMBER}.zip</a> <br /> <br /> </td> </tr> --> 
 <tr>
 <td>
