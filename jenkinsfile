@@ -1,31 +1,31 @@
 node() {  
-    stage('构建') { 
+    stage('����') { 
         //test
 		echo 'build'
 		bat label: '', script: 'netstat -ano|findstr "8080"'
     }
-    stage('测试') { 
+    stage('����') { 
          //test
 		echo 'test' 
 		bat label: '', script: 'ipconfig'
     }
-    stage('部署') { 
+    stage('����') { 
          //test
 		echo 'deploy' 
     }
-    stage('验收') { 
+    stage('����') { 
          //test
 		echo 'check'
 		emailext attachmentsPattern: '*.html', body: '''<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>${ENV, var="JOB_NAME"}-第${BUILD_NUMBER}次构建日志</title>
+<title>${ENV, var="JOB_NAME"}-�?{BUILD_NUMBER}次构建日�?/title>
 </head>
 <body leftmargin="8" marginwidth="0" topmargin="8" marginheight="4" offset="0">
 <table width="95%" cellpadding="0" cellspacing="0" style="font-size: 11pt; font-family: Tahoma, Arial, Helvetica, sans-serif">
 <tr>
-   <td>(本邮件是程序自动下发的，请勿回复！)</td>
+   <td>(本邮件是程序自动下发的，请勿回复�?</td>
 </tr>
 <tr>
    <td><h2><font color="#0000FF">构建结果 - ${BUILD_STATUS}</font></h2></td>
@@ -36,13 +36,13 @@ node() {
 <tr>
 <td> 
      <ul> 
-          <li>项目名称&nbsp;：&nbsp;${PROJECT_NAME}</li>
-          <li>构建编号&nbsp;：&nbsp;第${BUILD_NUMBER}次构建</li>
-          <li>触发原因：&nbsp;${CAUSE}</li>
-          <li>构建日志：&nbsp;<a href="${BUILD_URL}console">${BUILD_URL}console</a></li>
-          <li>构建&nbsp;&nbsp;Url&nbsp;：&nbsp;<a href="${BUILD_URL}">${BUILD_URL}</a></li>
-          <li>工作目录&nbsp;：&nbsp;<a href="${PROJECT_URL}ws">${PROJECT_URL}ws</a></li>
-          <li>项目&nbsp;&nbsp;Url&nbsp;：&nbsp;<a href="${PROJECT_URL}">${PROJECT_URL}</a></li>
+          <li>项目名称&nbsp;�?nbsp;${PROJECT_NAME}</li>
+          <li>构建编号&nbsp;�?nbsp;�?{BUILD_NUMBER}次构�?/li>
+          <li>触发原因�?nbsp;${CAUSE}</li>
+          <li>构建日志�?nbsp;<a href="${BUILD_URL}console">${BUILD_URL}console</a></li>
+          <li>构建&nbsp;&nbsp;Url&nbsp;�?nbsp;<a href="${BUILD_URL}">${BUILD_URL}</a></li>
+          <li>工作目录&nbsp;�?nbsp;<a href="${PROJECT_URL}ws">${PROJECT_URL}ws</a></li>
+          <li>项目&nbsp;&nbsp;Url&nbsp;�?nbsp;<a href="${PROJECT_URL}">${PROJECT_URL}</a></li>
      </ul> 
 </td> 
 </tr>
@@ -69,7 +69,7 @@ node() {
      </td>
 </tr>
 <tr>
-     <td><b><font color="#0B610B">构建日志 (最后 100行):</font></b> <hr size="2" width="100%" align="center" /></td>
+     <td><b><font color="#0B610B">构建日志 (最�?100�?:</font></b> <hr size="2" width="100%" align="center" /></td>
 </tr> <!-- <tr> <td>Test Logs (if test has ran): <a href="${PROJECT_URL}ws/TestResult/archive_logs/Log-Build-${BUILD_NUMBER}.zip">${PROJECT_URL}/ws/TestResult/archive_logs/Log-Build-${BUILD_NUMBER}.zip</a> <br /> <br /> </td> </tr> --> 
 <tr>
 <td>
@@ -78,6 +78,6 @@ node() {
 </tr>
 </table>
 </body>
-</html>''', mimeType: 'text/html', subject: '测试pipeline流水线', to: '2627651979@qq.com'
+</html>''', mimeType: 'text/html', subject: '测试pipeline流水�?, to: '2627651979@qq.com'
     }
 }
