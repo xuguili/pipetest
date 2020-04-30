@@ -78,6 +78,6 @@ node() {
 </tr>
 </table>
 </body>
-</html>''', mimeType: 'text/html', subject: '测试pipeline流水�?, to: '2627651979@qq.com'
+</html>''', mimeType: 'text/html', subject: 'pipelineTest', to: '2627651979@qq.com'
     }
 }
