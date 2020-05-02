@@ -1,18 +1,18 @@
-node('CentOs7') {  
-    stage('构建') { 
+锘縩ode('CentOs7') {  
+    stage('鏋勫缓') { 
         //test
 		echo 'build'
     }
-    stage('测试') { 
+    stage('娴嬭瘯') { 
          //test
 		echo 'test' 
     }
-    stage('部署') { 
+    stage('閮ㄧ讲') { 
          //test
 		echo 'deploy' 
         sh  'echo case001  >> suite.text'
     }
-    stage('验收') { 
+    stage('楠屾敹') { 
          //test
 		echo 'check'
     }
