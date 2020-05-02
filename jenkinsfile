@@ -2,12 +2,10 @@ node('CentOs7') {
     stage('¹¹½¨') { 
         //test
 		echo 'build'
-		bat label: '', script: 'netstat -ano|findstr "8080"'
     }
     stage('²âÊÔ') { 
          //test
 		echo 'test' 
-		bat label: '', script: 'ipconfig'
     }
     stage('²¿Êğ') { 
          //test
