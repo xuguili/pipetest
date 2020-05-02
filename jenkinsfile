@@ -16,6 +16,6 @@ node('CentOs7') {
     }
     stage('ั้สี') { 
          //test
-		echo 'check''', script: 'netstat -ano|findstr "8080"'
+		echo 'check'
     }
 }
